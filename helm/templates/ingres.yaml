@@ -1,0 +1,19 @@
+#apiVersion: networking.k8s.io/v1
+#kind: Ingress
+#metadata:
+#  name: api-ingress
+#  namespace: {{ .Values.namespace }}
+#  annotations:
+#    nginx.ingress.kubernetes.io/rewrite-target: /
+#spec:
+#  ingressClassName: nginx
+#  rules:
+#    - http:
+#        paths:
+#          - path: /docs
+#            pathType: Prefix
+#            backend:
+#              service:
+#                name: orders_api
+#                port:
+#                  number: 8080

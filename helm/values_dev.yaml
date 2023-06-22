@@ -1,0 +1,26 @@
+deployment:
+  name: orders-api
+  replicas: 1
+  app: orders-api
+  labels:
+    app: orders-api
+
+containers:
+  name: orders-api
+  image: alexkfdhg/orders_api:v1.0.4
+  imagePullPolicy: Always
+  containerPort: 8080
+  protocol: TCP
+
+load_balancer:
+  name: orders-api-lb
+  port: 80
+  targetPort: 8080
+  protocol: TCP
+  port_name: http
+
+secret:
+  name: orders-api-secret
+  mountPath: "/home/api/secret"
+
+namespace: orders-api
