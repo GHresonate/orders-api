@@ -1,5 +1,7 @@
 # orders-api
-A small Python api and helm chart for it. Still in progres, because I need to figure out how to run sql script to prepare database before deployment the better way.
+A small Python api and helm chart for it. Written on Python with FastApi and SQLAlchemy, and prepared for deploy to kubernetes cluster with Helm. The image for the api you can find at https://hub.docker.com/repository/docker/alexkfdhg/orders_api/general
+
+For easyer deployment I need to figure out how to run sql script to prepare database before deployment the better way.
 For production secret must be changed, because for now that is absolutly 'unsecret', and it would be better to add something like aws secret store with real encryption.
 ## What needs to be done?
 1) Add a way to run database_init.sql in the begining of deployment, maybe make run manual but by only one click of a button;
