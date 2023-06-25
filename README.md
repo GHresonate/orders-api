@@ -1,5 +1,5 @@
 # orders-api
-Ready to deploy orders-api. Written on Python with FastApi and SQLAlchemy, and prepared for deploy to kubernetes cluster with Helm.
+Ready to deploy orders-api. Written in Python with FastApi and SQLAlchemy, and prepared for deploy to a kubernetes cluster with Helm.
 
 For easyer deployment I need to figure out how to run sql script to prepare database before deployment the better way.
 For production secret must be changed, because for now that is absolutly 'unsecret', and it would be better to add something like aws secret store with real encryption.
